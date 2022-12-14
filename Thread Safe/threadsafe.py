@@ -101,4 +101,5 @@ class Producer(Worker):
             self.simulate_idle()
 
 class Consumer(Worker):
-    
+    def run(self):
+        
