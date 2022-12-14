@@ -99,3 +99,6 @@ class Producer(Worker):
             self.simulate_work()
             self.buffer.put(self.product)
             self.simulate_idle()
+
+class Consumer(Worker):
+    
