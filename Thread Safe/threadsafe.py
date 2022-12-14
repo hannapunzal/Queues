@@ -147,3 +147,6 @@ class View:
         padding = " " * int(29 / 100 * worker.progress)
         align = Align(padding + worker.state, align="left", vertical="middle")
         return Panel(align, height=5, title=title)
+    
+    def main(args):
+        
