@@ -107,3 +107,6 @@ class Consumer(Worker):
             self.simulate_work()
             self.buffer.task_done()
             self.simulate_idle()
+
+class View:
+    
