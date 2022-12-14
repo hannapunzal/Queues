@@ -2,7 +2,7 @@ from collections import deque
 from dataclasses import dataclass 
 from heapq import heapify, heappop, heappush
 from itertools import count
-from typing import AnyStr
+from typing import Any
 
 class IterableMixin:
     def __len__(self):
@@ -37,4 +37,9 @@ class PriorityQueue(IterableMixin):
 
     def dequeue(self):
         return heappop(self._elements)[-1]
-        
+
+@dataclass(order=True)
+class Element:
+    priority: float
+    count: int
+    value: Any 
