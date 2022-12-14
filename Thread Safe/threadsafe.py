@@ -177,4 +177,9 @@ class View:
         parser.add_argument("-ps", "--producer-speed", type=int, default=1)
         parser.add_argument("-cs", "--consumer-speed", type=int,default=1)
         return parser.parse_args()
-        
+
+    if __name__ == "__main__":
+        try:
+            main(parse_args())
+        except:
+            None
