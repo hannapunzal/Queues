@@ -179,5 +179,5 @@ def parse_args():
 if __name__ == "__main__":
     try:
         main(parse_args())
-    except:
-        None
+    except KeyboardInterrupt:
+        pass
