@@ -46,7 +46,7 @@ class Element:
 
 class MutableMinHeap(IterableMixin):
     def __init__(self):
-        super().__init()
+        super().__init__()
         self._elements_by_value = []
         self._elements = []
         self._counter = count()
