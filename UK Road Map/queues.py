@@ -13,3 +13,8 @@ class IterableMixin:
             yield self.dequeue()
 
 class Queue(IterableMixin):
+    def __init__(self, *elements):
+        self._elements = deque(elements)
+
+    def enqueue(self, element):
+        self._elements.append(element)
