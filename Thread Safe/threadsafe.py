@@ -149,4 +149,9 @@ class View:
         return Panel(align, height=5, title=title)
     
     def main(args):
-        
+        buffer = QUEUE_TYPES[args.queue]()
+        products = PRIORITIZED_PRODUCTS if args.queue == "heap" else PRODUCTS
+        producers = [
+            Producer(args.producer_speed, buffer, products)
+            for _ in range(args.producers)
+        ]
